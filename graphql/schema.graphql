@@ -1,0 +1,23 @@
+type Problem {
+	id: String,
+	title: String,
+	number: Int,
+	result: String,
+	memory: Int,
+	time: String,
+	language: String,
+	length: Int,
+	submit: String
+}
+
+type Versus {
+	both: [Int]
+	id1: [Int]
+	id2: [Int]
+}
+
+type Query {
+	problem(id: String!): Problem
+	problems(id: String!): [Problem]
+	versus(id1: String!, id2: String!): Versus
+}
